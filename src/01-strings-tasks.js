@@ -240,10 +240,7 @@ function encodeToRot13(/* str */) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  if (!value) {
-    return false;
-  }
-  if (value.toLowerCase) {
+  if (value instanceof String || typeof value === 'string') {
     return true;
   }
   return false;
